@@ -10,6 +10,7 @@ test('factorial number', ()=> {
     const expectedNum = expectedNumValue[index]
     const actualNum = factorialize(num)
 
+    expect(typeof actualNum).toBe('number')
     expect(actualNum).toBe(expectedNum)
     
   })  
