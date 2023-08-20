@@ -1,13 +1,17 @@
 const convertCelsiusToFahrenheit = require('../src/convertCelsiusToFahrenheit');
 
 test('Celsius to fahrenheit conversion', () => {
-  
-  expect(typeof convertCelsiusToFahrenheit(0)).toBe('number');
-  
-  expect(convertCelsiusToFahrenheit(0)).toBe(32);
+  // arrange
+  const celsiusValue = [0,-30,30];
+  const expectedFahrenheitValue = [32,-22,86]; 
 
-  expect(convertCelsiusToFahrenheit(-30)).toBe(-22);
+  // act
+  celsiusValue.forEach((celsius,index) => {
+    const expectedFahrenheit = expectedFahrenheitValue[index]
+    const actualFahrenheit = convertCelsiusToFahrenheit(celsius)
 
-  expect(convertCelsiusToFahrenheit(30)).toBe(86);
+    expect(typeof actualFahrenheit).toBe('number')
+    expect(actualFahrenheit).toBe(expectedFahrenheit)
+  })
   
 })
