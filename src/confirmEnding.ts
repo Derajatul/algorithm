@@ -1,11 +1,4 @@
-function confirmEnding(str, target) {
-  let word = str.split(' ')
-  let lastWord = word[word.length - 1]
-  let lastWordTarget = lastWord.substring(lastWord.length - target.length)
-  if(lastWordTarget == target){
-    return true
-  } else {
-    return false
-  }
+function confirmEnding(str:string, target:string):boolean {
+  return str.slice(str.length - target.length) === target;
 }
 module.exports = confirmEnding; 
