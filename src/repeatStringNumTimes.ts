@@ -1,7 +1,2 @@
-const repeatStringNumTimes = (str, num) => {
-  if(num > 0){
-   return str.repeat(num)
-  }
-  return '' 
-}
+const repeatStringNumTimes = (str, num) => num > 0 ? str.repeat(num) : ''; 
 module.exports = repeatStringNumTimes
