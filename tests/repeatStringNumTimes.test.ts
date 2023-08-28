@@ -3,12 +3,14 @@ const repeatStringNumTimes = require('../src/repeatStringNumTimes')
 test('repeat a given string to num times', () => {
   // arrange
   const stringValue = 'test'
-  const numValue = 3
-  const expectedValue = 'testtesttest'
+  const numValues = [3, -2]
+  const expectedValues = ['testtesttest', '']
 
-  // act
-  const actualValue = repeatStringNumTimes(stringValue, numValue)
+  expectedValues.forEach((expectedValue, index) => {
+    // act
+    const actualValue = repeatStringNumTimes(stringValue, numValues[index])
 
-  // assert
-  expect(actualValue).toBe(expectedValue)
+    // assert
+    expect(actualValue).toBe(expectedValue)
+  })
 })
