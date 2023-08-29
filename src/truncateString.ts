@@ -1,4 +1,4 @@
-const truncateString = (str, num) => {
+const truncateString = (str:string, num:number) => {
  if(num >= str.length){
     return str 
   } else{
