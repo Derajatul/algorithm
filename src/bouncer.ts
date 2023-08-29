@@ -1,4 +1,4 @@
-const bouncer = (arr) => {
+const bouncer = (arr:any[]) => {
   const newArr = arr;
   let trueValue = []
   newArr.map(e => e ? trueValue.push(e) : '')
