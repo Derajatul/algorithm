@@ -1,4 +1,5 @@
 import { expect, test } from "vitest";
+import sum from "./sum";
 
 test("sum", () => {
   // arrange
@@ -7,6 +8,7 @@ test("sum", () => {
   const expected = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
   // act & assert
   a.forEach((x, i) => {
-    expect(x + b[i]).toBe(expected[i]);
+    const actualValue = sum(x, b[i]);
+    expect(actualValue).toBe(expected[i]);
   });
 });
