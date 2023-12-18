@@ -13,5 +13,4 @@ function sumOfMultiples(n: number): number {
     return 0;
   }
 }
-const result = sumOfMultiples(1);
-result;
+
