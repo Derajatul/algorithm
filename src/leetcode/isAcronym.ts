@@ -7,5 +7,3 @@ function isAcronym(words: string[], s: string): boolean {
     return true;
   }
 }
-const result = isAcronym(["hawikjbs","qi","ssvgttkzd"], "rornirdphvargyce");
-result;
