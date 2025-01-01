@@ -1,8 +1,16 @@
 function singleNumber(nums: number[]): number {
-  let result = 0;
   for (let i = 0; i < nums.length; i++) {
-    result ^= nums[i];
+    let isSingle = true;
+    for (let j = 0; j < nums.length; j++) {
+      if (nums[i] === nums[j] && i !== j) {
+        isSingle = false;
+        break;
+      }
+    }
+    if (isSingle) {
+      return nums[i];
+    }
   }
-  return result;
+  return -1;
 }
-console.log(singleNumber([4, 1, 2, 1, 2]));
+console.log(singleNumber([2, 2, 1])); // 1
